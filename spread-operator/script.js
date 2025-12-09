@@ -64,10 +64,27 @@ const Str = "Hello";
 const charArray = [...Str];
 console.log(charArray);
 
-// Rest Parameters in Functions
+// 1. Rest Parameters in Functions
 function multiply(factor, ...args) {
   return args.map((num) => num * factor);
 }
 
 const multipliedValues = multiply(2, 1, 2, 3, 4);
 console.log(multipliedValues); // Output: [2, 4, 6, 8]
+
+// 2. Destructuring with Rest
+const [first, second, ...rest] = [10, 20, 30, 40, 50];
+console.log(first);
+console.log(second);
+console.log(rest);
+
+// 3. Object Destructuring with Rest
+const { name, ...otherDetails } = {
+  name: "Omar",
+  age: 35,
+  city: "NYC",
+  profession: "Developer",
+};
+
+console.log(name);
+console.log(otherDetails);
